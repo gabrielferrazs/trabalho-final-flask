@@ -1,0 +1,11 @@
+click==8.1.3
+Flask==2.2.3
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.2
+python-dotenv==1.0.0
+Werkzeug==2.2.3
+
+
+#numero banco 02e59449c42c816f18289fb9e9e0ad9b55c55c7ee677b335427f0d3bb0c4fda3
+# docker exec -it 02e59449c42c816f18289fb9e9e0ad9b55c55c7ee677b335427f0d3bb0c4fda3  bash

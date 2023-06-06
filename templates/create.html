@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Criar Nova Tarefa {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Titulo</label>
+        <input type="text" name="title"
+               placeholder="Titulo da Tarefa" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Conteúdo</label>
+        <textarea name="content" placeholder="Conteudo da Tarefa"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="hora">Hora de Vencimento</label>
+        <textarea name="hora" placeholder="AAAA-MM-DD HH:MM:SS"
+                  class="form-control">{{ request.form['hora'] }}</textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="concluido">Concluido? </label>
+        <textarea name="concluido" placeholder="Sim ou Não"
+                  class="form-control">{{ request.form['concluido'] }}</textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </div>
+</form>
+{% endblock %}
