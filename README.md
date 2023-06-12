@@ -8,5 +8,7 @@ Feito por: Gabriel Rodrigues Ferraz da Silva e Matheus Henrique da Silva.
 
 
 Comandos Docker:
+
 docker build -t trabalho-final-flask .
+
 docker run -p 5000:5000 trabalho-final-flask
