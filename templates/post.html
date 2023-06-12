@@ -2,7 +2,8 @@
 
 {% block content %}
     <h2>{% block title %} {{ post[2] }} {% endblock %}</h2>
-    <span class="badge badge-primary">{{ post[1] }}</span>
     <p>{{ post[3] }}</p>
-    <p>{{ post[4] }}</p>
+    <span class="badge badge-danger">Dia e Hora de Vencimento: {{ post[4] }}</span>       
+    <br>
+    <span class="badge badge-primary" id='mudar_cor'>Concluido: {{ post[5] }}</span>
 {% endblock %}

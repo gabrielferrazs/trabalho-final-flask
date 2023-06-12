@@ -2,10 +2,12 @@ import os
 import psycopg2
 from flask import Flask, render_template, request, url_for, flash, redirect
 from datetime import date
+import datetime
 
 #data_atual = date.today()
 #contagem_data = created - data_atual
 #print(contagem_data)
+
 
 # cria a conexao com o BD
 def get_db_connection():
@@ -38,6 +40,9 @@ def index():
     cur = conn.cursor()
     cur.execute('SELECT * FROM posts')
     posts = cur.fetchall()
+    
+    
+    
     cur.close()
     conn.close()
     return render_template('index.html', posts=posts)
@@ -73,6 +78,7 @@ def create():
             cur.close()
             conn.close()
             return redirect(url_for('index'))
+        
 
     return render_template('create.html')
 
