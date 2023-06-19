@@ -11,16 +11,19 @@ Feito por: Gabriel Rodrigues Ferraz da Silva e Matheus Henrique da Silva.
 Para esta prática, iremos construir três imagens: Blog (Flask), Postgres e PgAdmin (gerenciador do banco).
 
 1- docker pull postgres
+
 2- docker pull dpage/pgadmin4
 
 Após a execução desses dois comandos, as duas imagens postgres e pgadmin estão disponíveis.
 
 3- Criar uma rede própria para os conteineres: docker network create --driver bridge postgres-network
+
 4- Certifique de que a rede foi criada: docker network ls
 
 Agora, iremos construir os conteineres, um para cada imagem criada.
 
 5- docker run --name postgresql --network=postgres-network -e "POSTGRES_PASSWORD=admin123" -p 5432:5432 -d postgres
+
 Criamos um conteiner chamado postgresql, o colocamos na rede criada, configuramos a porta local 5432 na máquina local, que será mapeada para a porta 5432 do conteiner, além de configurar a senha admin123 para o usuário padrão postgres.
 
 O próximo comando precisa de um e-mail válido, apenas para criar o usuário para o gerenciador do banco.
