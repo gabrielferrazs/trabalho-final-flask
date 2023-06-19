@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+        
+        var dataAtual = new Date();
+
+        var horarioPrevisto = new Date("2023-06-12T18:00:00");
+
+        var diferenca = horarioPrevisto - dataAtual;
+
+        if (diferenca < 0) {
+            document.getElementById("tarefa1").classList.add("vermelho");
+        }
+
+        else {
+            document.getElementById("tarefa1").classList.add("verde");
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="tarefa" id="tarefa1">Tarefa 1</div>
+</body>
+
+</html>
